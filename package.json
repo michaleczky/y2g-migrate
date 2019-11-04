@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "build": "babel --preset babel-node -d dist/ src --source-maps --ignore src/**/*.test.js",
+    "start": "node app.js",
     "test": "mocha"
   },
   "keywords": [],
@@ -18,12 +17,6 @@
     "yargs": "^14.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/polyfill": "^7.6.0",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/register": "^7.6.2",
     "chai": "^4.2.0",
     "mocha": "^6.2.2",
     "nodemon": "^1.19.4",

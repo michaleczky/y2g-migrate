@@ -1,6 +1,5 @@
-import yargs from 'yargs';
-import { readJSONAsync } from "./helpers";
-import { YahooGroupsAPI } from './YahooGroupsAPI';
+const yargs = require('yargs');
+const helpers = require('./lib/helpers');
 
 const argv = yargs
     .usage('$0 <command> [options]')
@@ -19,11 +18,9 @@ const argv = yargs
 
 let secrets;
 
-secrets = readJSONAsync('./secrets.json').then((secrets) => {
+secrets = helpers.readJSONAsync('./secrets.json').then((secrets) => {
     console.dir(argv);
     if (argv.members) {
-        //const api = new YahooGroupsAPI();
+        const api = new YahooGroupsAPI('test', secrets.YahooGroups);
     }
 });
-
-console.dir(argv);
