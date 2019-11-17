@@ -1,5 +1,5 @@
 {
   "package": "./package.json",
-  "spec": "./src/**/*.test.js",
+  "spec": "./lib/**/*.test.js",
   "timeout": 5000
 }
